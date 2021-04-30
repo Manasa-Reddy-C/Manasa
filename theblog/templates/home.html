@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Email</th>
+        <th>Body</th>
+    </tr>
+{% for post in object_list %}
+<tr><td>{{post.title}}</td><td>{{post.author}}</td><td>{{post.author.email}}</td>
+    <td><a href="{% url 'article-detail' post.pk %}">{{post.Action}}</a></td>
+</tr>
+{% endfor %}
+</table>
